@@ -3,7 +3,7 @@ function getCurrentDateTime() {
   const now = new Date();
   const date = now.toLocaleDateString();
   const time = now.toLocaleTimeString();
-  return `${date} ${time}`;
+  return `${date}, ${time}`;
 }
 
 // Function to update the timer every second
