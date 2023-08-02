@@ -1,17 +1,16 @@
-//your JS code here. If required.
-function getCurrent() {
-	const now=new Date();
-	const date=now.toLocalDateString();
-	const time=now.toLocalTimeString();
-	return '${date} ${time}';
+// Function to get the current date and time in the desired format
+function getCurrentDateTime() {
+  const now = new Date();
+  const date = now.toLocaleDateString();
+  const time = now.toLocaleTimeString();
+  return `${date} ${time}`;
 }
+
+// Function to update the timer every second
 function updateTimer() {
-	const timeElement=document.getElementById('timer');
-	timerElement.textContent=getCurrent();
-	
-	
+  const timerElement = document.getElementById('timer');
+  timerElement.textContent = getCurrentDateTime();
 }
 
-setInterval(updateTimer,1000);
-
-
+// Call the updateTimer function every second
+setInterval(updateTimer, 1000);
